@@ -6,8 +6,8 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "",
-    "license": "ISC",
+    "author": "jonnakollin & j0na5L",
+    "license": "MIT",
     "dependencies": {
         "body-parser": "^1.15.2",
         "dom-storage": "^2.0.2",
