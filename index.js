@@ -3,7 +3,7 @@ var app = express();
 var http = require('http').Server(app);
 var socket = require('socket.io')(http);
 var bodyParser = require('body-parser');
-var corsFilter = require('./middleware/cors-filter');
+var cors = require('./middleware/cors');
 var fuzzyController = require('./controllers/routes/fuzzy-controller');
 var fuzzySocket = require('./controllers/socket/fuzzy-socket');
 
@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.use(corsFilter);
+app.use(cors);
 
 /* Routing */
 
