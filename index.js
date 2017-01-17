@@ -17,4 +17,15 @@ app.use(cors);
 
 /* Routing */
 
-app.get('/v1/fuzzyboard', fuzzyController.getAll());
+app.get('/v1/fuzzyboard', fuzzyController.getAll);
+app.get('/v1/fuzzyboard/fuzzyitems/:id', fuzzyController.get);
+app.delete('/v1/fuzzyboard/fuzztitems/:id', fuzzyController.remove);
+app.put('/v1/fuzzyboard/fuzzyitems/:id', fuzzyController.update);
+app.post('/v1/fuzzyboard/fuzzyitems', fuzzyController.add);
+
+/*Socket*/
+fuzztSocket(http);
+
+http.listen(8080, function() {
+    console.log('listening on *:8081');
+});
